@@ -1,8 +1,8 @@
-class createUser {
+class User {
   constructor(firstName, lastName, email) {
     this.firstName = firstName;
     this.lastName = lastName;
-    fullName: '${this.firstName} ${this.lastName}';
+    this.fullName = '${this.firstName} ${this.lastName}';
     this.email = email;
   }
   checkLastOnline() {
@@ -18,9 +18,8 @@ class createUser {
   }
 }
 
+const user = new User('John', 'Doe', 'john@doe.com');
 
-const user = new createUser('John', 'Doe', 'john@doe.com');
+const user2 = User('Jane', 'Doe', 'jane@doe.com');
 
-const user2 = createUser('Jane', 'Doe', 'jane@doe.com');
-
-
+console.log(user, user2);
